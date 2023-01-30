@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Day-ToDo</title>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="bg-blue-600">
+        <div class="flex justify-between py-4 text-white mx-8">
+            <div class="flex items-center  cursor-pointer space-x-8">
+                <i class="fa-solid fa-list"></i>
+                <h1>ToDo</h1>
+            </div>
+            <div>
+                <form>
+                    <div class="bg-white text-gray-500 px-4 hidden md:block ">
+                        <i class="fa-solid fa-magnifying-glass pr-2"></i>
+                        <input type="text" name="search" placeholder="Search.."
+                            class="  md:w-96 box-border rounded text-base bg-white bg-no-repeat py-1 ">
+                    </div>
+                </form>
+            </div>
+            <div class="space-x-6 cursor-pointer">
+                <i class="fa-solid fa-gear"></i>
+                <i class="fa-sharp fa-solid fa-question"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-headset"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- date section -->
+    <div class="flex justify-between px-8 mt-12">
+        <div class="flex">
+            <div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="ml-4">
+                <h1>My Day ...</h1>
+                <h1 id="dateDiv"></h1>
+            </div>
+        </div>
+        <div class="text-gray-600 ">
+            <i class="fa-solid fa-arrow-down-wide-short"></i> <span>Sort</span>
+            <i class="fa-solid fa-lightbulb ml-7"></i> <span>Suggestions</span>
+        </div>
+    </div>
+    <!-- input  and add section -->
+    <div>
+        <div class="mx-6 mt-8 flex items-center">
+            <i class="fa-regular fa-circle text-blue-400"></i>
+            <input type="text" id="input" placeholder="Add a task"
+                class=" w-[100%]  py-2 ml-4  rounded text-base drop-shadow-lg  ">
+        </div>
+        <div class="flex justify-between mx-6 mt-6 shadow-2xl rounded text-base  py-4 items-center ">
+            <i class="fa-regular fa-bell"></i>
+
+            <button
+                class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow"
+                onclick="addData()">
+                Add
+            </button>
+        </div>
+    </div>
+    <!-- output section -->
+    <div id="todoList">
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
